@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { courses } from '@/lib/data';
+import Image from 'next/image';
+import { courses, photos, coursePhoto } from '@/lib/data';
 
 // Course list with a floating card that follows the pointer (desktop only)
 export default function Courses() {
@@ -50,9 +51,14 @@ export default function Courses() {
           ))}
         </ul>
       </div>
-      <div ref={card} className={`preview tone-${c.tone}${hover !== null ? ' is-on' : ''}`} aria-hidden="true">
-        <small>{c.track}</small>
-        <b>{c.tag}</b>
+      <div ref={card} className={`preview${hover !== null ? ' is-on' : ''}`} aria-hidden="true">
+        {Object.entries(photos).map(([key, p]) => (
+          <Image key={key} src={p.src} alt="" fill sizes="260px" className={coursePhoto[c.tag] === key ? 'is-shown' : ''} />
+        ))}
+        <div className={`preview-tag tone-${c.tone}`}>
+          <small>{c.track}</small>
+          <b>{c.tag}</b>
+        </div>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { contact, tel } from '@/lib/data';
+import { contact, tel, photos } from '@/lib/data';
 import Magnetic from './Magnetic';
 
 function Phone({ number }) {
@@ -55,7 +55,7 @@ export default function Contact() {
       <div className="wordmark" aria-hidden="true">NEXT<span>GEN</span></div>
       <footer className="foot">
         <span>© {new Date().getFullYear()} Next Gen Languages &amp; IELTS preparation, Constantine</span>
-        <span>Language school and official IELTS center</span>
+        <span>Photos: {Object.values(photos).map((p) => p.by).join(', ')} on Unsplash</span>
       </footer>
     </section>
   );

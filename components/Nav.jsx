@@ -8,6 +8,7 @@ const links = [
   ['#courses', 'Courses'],
   ['#journey', 'How it works'],
   ['#ielts', 'The IELTS test'],
+  ['#club', 'Speaking club'],
   ['#contact', 'Contact'],
 ];
 
