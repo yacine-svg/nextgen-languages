@@ -1,0 +1,25 @@
+{
+  "name": "nextgen-languages",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@react-spring/three": "^9.7.5",
+    "@react-three/fiber": "^8.17.10",
+    "@shadergradient/react": "^2.0.21",
+    "camera-controls": "^2.9.0",
+    "gsap": "^3.12.5",
+    "lenis": "^1.3.4",
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "^0.169.0",
+    "three-stdlib": "^2.33.0"
+  }
+}
