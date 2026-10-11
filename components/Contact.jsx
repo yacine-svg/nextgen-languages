@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { contact, tel, photos } from '@/lib/data';
 import Magnetic from './Magnetic';
 
@@ -54,7 +55,10 @@ export default function Contact() {
       </div>
       <div className="wordmark" aria-hidden="true">NEXT<span>GEN</span></div>
       <footer className="foot">
-        <span>© {new Date().getFullYear()} Next Gen Languages &amp; IELTS preparation, Constantine</span>
+        <span className="foot-brand">
+          <Image src="/logo.png" alt="Next Gen Languages logo" width={36} height={36} />
+          © {new Date().getFullYear()} Next Gen Languages &amp; IELTS preparation, Constantine
+        </span>
         <span>Photos: {Object.values(photos).map((p) => p.by).join(', ')} on Unsplash</span>
       </footer>
     </section>

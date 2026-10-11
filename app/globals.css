@@ -83,7 +83,9 @@ p { margin: 0; }
 }
 .nav.is-solid { background: color-mix(in srgb, var(--paper) 82%, transparent); color: var(--ink); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--f-display); font-weight: 800; letter-spacing: -0.01em; font-variation-settings: 'wdth' 118; font-size: 1.05rem; }
-.brand-mark { width: 30px; height: 30px; border-radius: 50%; background: conic-gradient(from 200deg, var(--saffron), #ff6b4a, #2b3cff, var(--mint), var(--saffron)); flex: none; }
+.brand-logo { width: 44px; height: 44px; flex: none; border-radius: 50%; box-shadow: 0 6px 18px -6px rgba(13, 20, 48, 0.5); transition: transform 0.6s var(--ease); }
+.brand:hover .brand-logo { transform: rotate(-12deg) scale(1.06); }
+@media (max-width: 480px) { .brand span { display: none; } }
 .nav-links { display: flex; gap: clamp(14px, 2vw, 30px); list-style: none; margin: 0; padding: 0; font-size: var(--step--1); }
 .nav-links a { text-decoration: none; opacity: 0.85; }
 .nav-links a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
@@ -316,7 +318,8 @@ p { margin: 0; }
 
 .wordmark { font-family: var(--f-display); font-weight: 900; font-size: clamp(3rem, 14.5vw, 19rem); line-height: 0.8; letter-spacing: -0.05em; font-variation-settings: 'wdth' 125; white-space: nowrap; margin-top: clamp(60px, 9vw, 140px); color: var(--ink); user-select: none; }
 .wordmark span { color: var(--cobalt); }
-.foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 22px calc(22px + env(safe-area-inset-bottom, 0px)); font-size: var(--step--1); color: var(--muted); border-top: 1px solid var(--line); margin-top: 24px; }
+.foot-brand { display: inline-flex; align-items: center; gap: 10px; }
+.foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-block: 22px calc(22px + env(safe-area-inset-bottom, 0px)); font-size: var(--step--1); color: var(--muted); border-top: 1px solid var(--line); margin-top: 24px; }
 
 /* ---------- Cursor ---------- */
 .cursor { position: fixed; left: 0; top: 0; z-index: 100; pointer-events: none; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--saffron); mix-blend-mode: normal; transition: width 0.35s var(--ease), height 0.35s var(--ease), margin 0.35s var(--ease); display: grid; place-items: center; }

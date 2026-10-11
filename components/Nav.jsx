@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useLenis } from 'lenis/react';
 import Magnetic from './Magnetic';
 
@@ -24,8 +25,8 @@ export default function Nav() {
   return (
     <header className={`nav${solid ? ' is-solid' : ''}`}>
       <a className="brand" href="#top" onClick={(e) => go(e, '#top')}>
-        <span className="brand-mark" aria-hidden="true" />
-        Next Gen Languages
+        <Image className="brand-logo" src="/logo.png" alt="" width={44} height={44} priority />
+        <span>Next Gen Languages</span>
       </a>
       <nav aria-label="Main">
         <ul className="nav-links">
